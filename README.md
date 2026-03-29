@@ -286,3 +286,11 @@ Futuro:
 | Docker | Contenedores |
 | FastAPI | Backend Python |
 | Next.js | Frontend React |
+
+#13. Prototipo
+<img width="1661" height="876" alt="image" src="https://github.com/user-attachments/assets/6f845bb4-fadb-453e-9ddb-512fc1e991a5" />
+<img width="1657" height="878" alt="image" src="https://github.com/user-attachments/assets/f207bf58-df52-4d97-9f25-1318bf1a5246" />
+<img width="1667" height="870" alt="image" src="https://github.com/user-attachments/assets/64249f99-1b7b-4672-9406-deedd19d2ece" />
+<img width="1652" height="870" alt="image" src="https://github.com/user-attachments/assets/06e40142-6546-4185-9377-7aa635515f50" />
+
+
