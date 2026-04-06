@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # Base de Datos (PostgreSQL)
+  db:
+    image: postgres:15
+    container_name: utb_db
+    restart: always
+    environment:
+      POSTGRES_USER: user_admin
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: academic_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Backend (FastAPI)
+  backend:
+    build: ./backend  # Docker buscará el Dockerfile dentro de la carpeta backend
+    container_name: utb_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://user_admin:password123@db:5432/academic_db
+    depends_on:
+      - db
+
+  # Frontend (Next.js)
+  frontend:
+    build: ./frontend
+    container_name: utb_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
